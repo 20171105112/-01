@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var stepperc: UIStepper!
     @IBAction func steppera(_ sender: Any) {
-        stepperb.maximumValue = 13
+        stepperb.maximumValue = 11
         stepperb.wraps = true
         
         print("\(stepperb.value)")
         texta.text = "\(Int(stepperb.value))"
-        if (stepperb.value == 13)
+        if (stepperb.value == 11)
         {
             temp = temp + 1
             text1.text = "\(temp)"
@@ -41,21 +41,39 @@ class ViewController: UIViewController {
 
      
     }
+    @IBAction func clear1(_ sender: Any) {
+        stepperb.value = 0
+    }
     
     @IBAction func stepperc(_ sender: Any) {
-        stepperc.maximumValue = 13
+        stepperc.maximumValue = 11
         stepperc.wraps = true
         
         print("\(stepperc.value)")
         textb.text = "\(Int(stepperc.value))"
-        if (stepperc.value == 13)
+        if (stepperc.value == 11)
         {
             sum = sum + 1
             text2.text = "\(sum)"
+            if (sum == 2)
+            {
+                text2.text = "胜利"
+            }
         }
+        
+    }
+    @IBAction func CA(_ sender: Any) {
+        textb.text = "0"
     }
     
-  
+    @IBAction func CLEAR2(_ sender: Any) {
+        text1.text = "0"
+        text2.text = "0"
+        
+    }
+    
+    
+    
     
     
  
